@@ -20,12 +20,15 @@ console.log(risultato);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let boundary = function (a) {
-  return (a >= 20 && a <= 100) || a === 400;
+  if((a >= 20 && a <= 100) || a === 400){
+     return true
+  } else {
+    return false
+  }
 };
-let ritorno = boundary(101);
+let ritorno = boundary(300);
 console.log(ritorno);
-let ritorno2 = boundary(400);
-console.log(ritorno2);
+
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
@@ -94,12 +97,30 @@ console.log(areaDelRettangolo);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let crazyDiff=function(a,b){
+  if((a-b)>19){
+    return Math.abs(a-b)*3
+  } else {
+    return Math.abs(a-b)
+  }
+}
+let differenza=crazyDiff(51,19)
+console.log(differenza)
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let codify=function(str){
+  if(str.startsWith("code")){
+    return str
+  } else{
+    return "code"+str
+  }
+}
+console.log(codify("coders"))
+console.log(codify("Hello"))
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -108,9 +129,19 @@ console.log(areaDelRettangolo);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let check3and7=function(x){
+  if(x>=0 && (x%3===0 || x%7===0)){
+    return true
+  } else {
+    return false
+  }
+}
+console.log (check3and7(70))
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let cutString= function(str){
+  
+}
